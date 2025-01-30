@@ -4,11 +4,12 @@ from page_definitions2 import contact_page
 from page_definitions2 import AI_page
 from page_definitions2 import checkbox_page
 from page_definitions2 import information_page
+from page_definitions2 import faq_page
 
 # set up the page
 st.set_page_config(page_title="SupportCircle")
 
-options = ["Mainpage", "Contacts", "Checkbox", "Information", "Your AI assistant"]
+options = ["Mainpage", "Contacts", "Checkbox", "Information", "Your AI assistant", "FAQ"]
 page_selection = st.sidebar.selectbox("Menu", options)
 
 
@@ -22,5 +23,7 @@ elif page_selection == "Information":
     information_page()
 elif page_selection == "Your AI assistant":
     AI_page()
+elif page_selection == "FAQ":
+    faq_page()
 
 
