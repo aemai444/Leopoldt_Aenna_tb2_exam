@@ -1,7 +1,6 @@
 import streamlit as st
 from hugchat.login import Login
 from hugchat import hugchat
-import webbrowser
 
 # Function to display the main page
 def main_page():
@@ -345,7 +344,7 @@ def information_page():
     tabs1, tabs2, tabs3 = st.tabs(['How to know', 'Legal information', 'Women´s Shelters'])
 
     with tabs1:
-        st.header("How do you know your being in an abusive realtionship")
+        st.header("How do you know you are in an abusive realtionship")
         st.subheader("Signs of domestic abuse")
         st.markdown(
             "If you alter your behaviour because you are frightened of how your partner will react, this could be abuse. Many women experience domestic abuse without ever being physically harmed. Remember: non-physical forms of abuse can be as destructive and as undermining as physical violence.")
