@@ -6,7 +6,7 @@ import webbrowser
 # Function to display the main page
 def main_page():
     #add title and subtitle
-    st.title("SupportCircle - A Support Hub for Women & FLINTA Persons")
+    st.title("SupportCircle - A Support Hub for Women & FLINTA*")
     st.subheader("Find Help, Stay Safe, Take Action")
 
     # create columns and place information inside
@@ -14,7 +14,7 @@ def main_page():
 
     with col1:
         # Provide an introduction to the platform
-        st.write("We are dedicated to empower women and flinta persons. This platform provides resources, guidance, and emergency support for those experiencing domestic violence. Here, you can find information, access local support services and help resources.")
+        st.write("We are dedicated to empower women and flinta*. This platform provides resources, guidance, and emergency support for those experiencing domestic violence. Here, you can find information, access local support services and help resources.")
 
     with col2:
         #button to safely exit the page (redirects to Google)
@@ -337,50 +337,41 @@ def information_page():
         if safe_exit:
             webbrowser.open("https://www.google.com")
     # create tabs
-    tabs1, tabs2, tabs3 = st.tabs(['Women´s Shelters', 'Legal information', 'How to know'])
+    tabs1, tabs2, tabs3 = st.tabs(['How to know', 'Legal information', 'Women´s Shelters'])
 
     with tabs1:
-        st.header("**Procedure - The Path to a Women´s Shelter**")
-        st.markdown("The path to a women's shelter is straightforward.")
-        st.markdown("**Emergency hotline: 040 / 8000 4 1000**")
-        st.markdown("**The emergency intake service is available day and night. We take in all women affected by violence.**")
-        st.markdown("After speaking with us on the phone, a meeting point can be arranged. You can reach this meeting point using public transportation in Hamburg. From there, we will pick you up (with your children).")
-        st.markdown("It is important to protect yourself and your children. In dangerous situations, call the police (Tel. 110). The police can also accompany you to the meeting point.")
-        st.markdown("The emergency intake service is a safe space, and its address is confidential. You do not have to pay anything. Here, you can take some time to recover and plan your next steps.")
-        st.markdown("The staff at the emergency intake will talk to you about your situation and your options. From the emergency intake, you can move directly into a women's shelter.")
-        st.header("Who Can Stay in a Women's Shelter?")
-        st.markdown("Any woman experiencing violence or at risk of violence can stay in a women's shelter. We welcome all women who identify as women, regardless of whether they are trans or cis, what their bodies look like, or what is stated in their documents.")
-        st.header("Violence Against Women Takes Many Forms")
-        # Create a list of different types of violence
-        violence_types = ["Physical violence", "Sexualized violence", "Rape", "Social Isolation", "Financial control (denying access to money)", "Human trafficking and sexual exploitation", "Deprivation of liberty", "Psychological violence (e.g., threats, demeaning behavior, control)", "Forced marriage"]
-        for v in violence_types:
-            st.markdown(f"- {v}") # Display each type as a bullet point
-        st.header("Are You Afraid That No One Will Believe You?")
-        st.markdown("We are here for you. We believe you and will support you (and your children).")
-        st.header("If You Can, Please Bring the Following Items:")
-        # List of important items to bring when seeking shelter
-        items_to_bring = ["ID/passport/residence permit",
-                          "Health insurance card, child medical records, vaccination card, medications",
-                          "Birth certificate, marriage certificate", "Bank card and money",
-                          "Rental agreement and apartment keys",
-                          "Documents from the job center, social services, and family court", "Clothing",
-                          "School supplies and toys for the children", "Social security card",
-                          "Employment contract, pay slips"]
-        for item in items_to_bring:
-            st.markdown(f"- {item}")
-        st.markdown("If you are missing important items, we will help you obtain them. You will receive dishes, bedding, and towels from us.")
-        st.header("What is a women´s Shelter?")
-        st.markdown("A women's shelter is a safe house for women who are experiencing or at risk of violence. Women with or without children (boys up to 18 years old) can stay in a women's shelter. They receive temporary accommodation, protection, counseling, and support.")
-        st.markdown("Each women's shelter has rules, including keeping the address confidential. This means, for example, that residents cannot receive visitors.")
-        st.markdown("At the shelter, you will live with other women and children on the same floor, sharing spaces like the kitchen, bathroom, living room, and garden. Women without children often share a room with other women. Mothers and their children usually receive their own room. You should be able to organize your daily life independently.")
-        st.markdown("Only women work in the shelter, and they are committed to supporting you (and your children). This principle is called partisanship.")
-        st.markdown("We do not share any information about residents with third parties. We provide counseling and support to help you lead an independent life and offer assistance in multiple languages. If needed, we work with interpreters.")
-        st.markdown("For girls and boys in the women's shelter, there are staff members who help children process their experiences of violence and advocate for their well-being.")
-        st.header("We Support and Assist Women and Children, for Example, With:")
-        # List of support services available
-        support_options = ["Processing experiences of violence", "Finding new daycare or school placements","Developing new life perspectives", "Clarifying financial and legal situations", "Contacting and accompanying visits to authorities and offices","Searching for housing"]
-        for support in support_options:
-            st.markdown(f"{support}")
+        st.header("How do you know your being in an abusive realtionship")
+        st.subheader("Signs of domestic abuse")
+        st.markdown(
+            "If you alter your behaviour because you are frightened of how your partner will react, this could be abuse. Many women experience domestic abuse without ever being physically harmed. Remember: non-physical forms of abuse can be as destructive and as undermining as physical violence.")
+        st.subheader("Spotting the signs")
+        st.markdown("**Types of domestic abuse**")
+        # create list of types of domestic abuse
+        types_domesticabuse = [
+            "**Psychological/emotional abuse:** Includes name-calling, threats and manipulation, blaming you for the abuse or ‘gaslighting’ you.",
+            "**Coercive control:** When an abuser uses a pattern of behaviour over time to exert power and control. It is a criminal offence.",
+            "**Physical abuse:** This isn’t only hitting. He might restrain you or throw objects. He might pinch or shove you and claim it’s a ‘joke’.",
+            "**Tech abuse:** He might send abusive texts, demand access to your devices, track you with spyware, or share images of you online.",
+            "**Economic abuse:** Controlling your access to money or resources. He might take your wages, stop you working, or put you in debt without your knowledge or consent",
+            "**Sexual abuse:** This doesn’t have to be physical. He might manipulate, deceive or coerce you into doing things you don’t want to do."]
+        for types in types_domesticabuse:
+            st.markdown(f"- {types}")
+        st.subheader("**Am I in an abusive relationship?**")
+        st.markdown(
+            "**Relationships aren’t abusive, individuals are.** Sometimes it’s tricky to know whether your experiences, or those of someone you love, qualify as abuse. We’ve come up with this list of questions to help you begin to spot the signs of an abusive partner:")
+        signs_of_abuse = ["Is your partner jealous and possessive?", "Is he charming one minute and abusive the next?",
+                          "Does he tell you what to wear, where to go, who to see?", "Does he constantly put you down?",
+                          "Does he play mind games and make you doubt your judgement?",
+                          "Does he control your money, or make sure you are dependent on him for everyday things?",
+                          "Does he pressure you to have sex when you don’t want to?",
+                          "Are you starting to walk on eggshells to avoid making him angry?",
+                          "Does he control your access to medicine, devices or care that you need?",
+                          "Does he monitor or track your movements or messages?",
+                          "Does he use anger and intimidation to frighten and control you?"]
+        for signs in signs_of_abuse:
+            st.markdown(f"- {signs}")
+        st.markdown(
+            "If you answered yes to any of the above questions, then you may be experiencing domestic abuse. You don’t have to deal with this alone. Under **Contacts** you can find people and institutions that can help you.")
     with tabs2:
         st.header("**What Rights Do You Have as a Woman?**")
         # create list of legal rights
@@ -415,21 +406,66 @@ def information_page():
         st.markdown("- If you do not feel safe despite the eviction order, you can seek shelter in a women's refuge.")
         st.write("[Click here for Information on Victim Safety](https://www.hamburg.de/resource/blob/973986/13c039e23963007e120f5f94ebe0f6b3/factsheet-opferschutz-2023-data.pdf)")
     with tabs3:
-        st.header("How do you know your being in an abusive realtionship")
-        st.subheader("Signs of domestic abuse")
-        st.markdown("If you alter your behaviour because you are frightened of how your partner will react, this could be abuse. Many women experience domestic abuse without ever being physically harmed. Remember: non-physical forms of abuse can be as destructive and as undermining as physical violence.")
-        st.subheader("Spotting the signs")
-        st.markdown("**Types of domestic abuse**")
-        # create list of types of domestic abuse
-        types_domesticabuse = ["**Psychological/emotional abuse:** Includes name-calling, threats and manipulation, blaming you for the abuse or ‘gaslighting’ you.", "**Coercive control:** When an abuser uses a pattern of behaviour over time to exert power and control. It is a criminal offence.", "**Physical abuse:** This isn’t only hitting. He might restrain you or throw objects. He might pinch or shove you and claim it’s a ‘joke’.", "**Tech abuse:** He might send abusive texts, demand access to your devices, track you with spyware, or share images of you online.", "**Economic abuse:** Controlling your access to money or resources. He might take your wages, stop you working, or put you in debt without your knowledge or consent", "**Sexual abuse:** This doesn’t have to be physical. He might manipulate, deceive or coerce you into doing things you don’t want to do."]
-        for types in types_domesticabuse:
-            st.markdown(f"- {types}")
-        st.subheader("**Am I in an abusive relationship?**")
-        st.markdown("**Relationships aren’t abusive, individuals are.** Sometimes it’s tricky to know whether your experiences, or those of someone you love, qualify as abuse. We’ve come up with this list of questions to help you begin to spot the signs of an abusive partner:")
-        signs_of_abuse = ["Is your partner jealous and possessive?", "Is he charming one minute and abusive the next?", "Does he tell you what to wear, where to go, who to see?", "Does he constantly put you down?", "Does he play mind games and make you doubt your judgement?", "Does he control your money, or make sure you are dependent on him for everyday things?", "Does he pressure you to have sex when you don’t want to?", "Are you starting to walk on eggshells to avoid making him angry?", "Does he control your access to medicine, devices or care that you need?", "Does he monitor or track your movements or messages?", "Does he use anger and intimidation to frighten and control you?"]
-        for signs in signs_of_abuse:
-            st.markdown(f"- {signs}")
-        st.markdown("If you answered yes to any of the above questions, then you may be experiencing domestic abuse. You don’t have to deal with this alone. Under **Contacts** you can find people and institutions that can help you.")
+        st.header("**Procedure - The Path to a Women´s Shelter**")
+        st.markdown("The path to a women's shelter is straightforward.")
+        st.markdown("**Emergency hotline: 040 / 8000 4 1000**")
+        st.markdown(
+            "**The emergency intake service is available day and night. We take in all women affected by violence.**")
+        st.markdown(
+            "After speaking with us on the phone, a meeting point can be arranged. You can reach this meeting point using public transportation in Hamburg. From there, we will pick you up (with your children).")
+        st.markdown(
+            "It is important to protect yourself and your children. In dangerous situations, call the police (Tel. 110). The police can also accompany you to the meeting point.")
+        st.markdown(
+            "The emergency intake service is a safe space, and its address is confidential. You do not have to pay anything. Here, you can take some time to recover and plan your next steps.")
+        st.markdown(
+            "The staff at the emergency intake will talk to you about your situation and your options. From the emergency intake, you can move directly into a women's shelter.")
+        st.header("Who Can Stay in a Women's Shelter?")
+        st.markdown(
+            "Any woman experiencing violence or at risk of violence can stay in a women's shelter. We welcome all women who identify as women, regardless of whether they are trans or cis, what their bodies look like, or what is stated in their documents.")
+        st.header("Violence Against Women Takes Many Forms")
+        # Create a list of different types of violence
+        violence_types = ["Physical violence", "Sexualized violence", "Rape", "Social Isolation",
+                          "Financial control (denying access to money)", "Human trafficking and sexual exploitation",
+                          "Deprivation of liberty",
+                          "Psychological violence (e.g., threats, demeaning behavior, control)", "Forced marriage"]
+        for v in violence_types:
+            st.markdown(f"- {v}")  # Display each type as a bullet point
+        st.header("Are You Afraid That No One Will Believe You?")
+        st.markdown("We are here for you. We believe you and will support you (and your children).")
+        st.header("If You Can, Please Bring the Following Items:")
+        # List of important items to bring when seeking shelter
+        items_to_bring = ["ID/passport/residence permit",
+                          "Health insurance card, child medical records, vaccination card, medications",
+                          "Birth certificate, marriage certificate", "Bank card and money",
+                          "Rental agreement and apartment keys",
+                          "Documents from the job center, social services, and family court", "Clothing",
+                          "School supplies and toys for the children", "Social security card",
+                          "Employment contract, pay slips"]
+        for item in items_to_bring:
+            st.markdown(f"- {item}")
+        st.markdown(
+            "If you are missing important items, we will help you obtain them. You will receive dishes, bedding, and towels from us.")
+        st.header("What is a women´s Shelter?")
+        st.markdown(
+            "A women's shelter is a safe house for women who are experiencing or at risk of violence. Women with or without children (boys up to 18 years old) can stay in a women's shelter. They receive temporary accommodation, protection, counseling, and support.")
+        st.markdown(
+            "Each women's shelter has rules, including keeping the address confidential. This means, for example, that residents cannot receive visitors.")
+        st.markdown(
+            "At the shelter, you will live with other women and children on the same floor, sharing spaces like the kitchen, bathroom, living room, and garden. Women without children often share a room with other women. Mothers and their children usually receive their own room. You should be able to organize your daily life independently.")
+        st.markdown(
+            "Only women work in the shelter, and they are committed to supporting you (and your children). This principle is called partisanship.")
+        st.markdown(
+            "We do not share any information about residents with third parties. We provide counseling and support to help you lead an independent life and offer assistance in multiple languages. If needed, we work with interpreters.")
+        st.markdown(
+            "For girls and boys in the women's shelter, there are staff members who help children process their experiences of violence and advocate for their well-being.")
+        st.header("We Support and Assist Women and Children, for Example, With:")
+        # List of support services available
+        support_options = ["Processing experiences of violence", "Finding new daycare or school placements",
+                           "Developing new life perspectives", "Clarifying financial and legal situations",
+                           "Contacting and accompanying visits to authorities and offices", "Searching for housing"]
+        for support in support_options:
+            st.markdown(f"{support}")
+
 def faq_page():
     # Set the title of the FAQ page
     st.title("FAQ - for domestic abuse")
