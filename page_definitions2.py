@@ -18,11 +18,10 @@ def main_page():
 
     with col2:
         #button to safely exit the page (redirects to Google)
-
         url = "https://www.google.com"
 
         # Button zum Öffnen der Webseite
-        st.link_button("Safe Exit", url)
+        st.link_button("**🚨Safe Exit**", url)
 
 # Function to display checkboxes with safety plans
 def checkbox_page():
@@ -91,9 +90,10 @@ def checkbox_page():
 
     with col3:
         # button to safely exit the page (redirects to google)
-        safe_exit = st.button("**🚨SAFE EXIT**")
-        if safe_exit:
-            webbrowser.open("https://www.google.com")
+        url = "https://www.google.com"
+
+        # Button zum Öffnen der Webseite
+        st.link_button("**🚨Safe Exit**", url)
 
     # Column for "Emergency Plan"
     with col4:
@@ -217,9 +217,10 @@ def contact_page():
 
             with col2:
                 #create exits button to safely leave the page
-                safe_exit = st.button("**🚨SAFE EXIT**")
-                if safe_exit:
-                    webbrowser.open("https://www.google.com")
+                url = "https://www.google.com"
+                
+                # Button zum Öffnen der Webseite
+                st.link_button("**🚨Safe Exit**", url)
 
 def AI_page():
     # Create two columns for layout
@@ -323,9 +324,10 @@ def AI_page():
                         st.write(response)
     # Column for the safe exit button
     with col2:
-        safe_exit = st.button("**🚨SAFE EXIT**")
-        if safe_exit:
-            webbrowser.open("https://www.google.com")
+        url = "https://www.google.com"
+        
+        # Button zum Öffnen der Webseite
+        st.link_button("**🚨Safe Exit**", url)
 
 def information_page():
     # Create a two-column layout for the page
@@ -335,9 +337,10 @@ def information_page():
         st.write(" ")
     with col2:
         #button to safely exit page
-        safe_exit = st.button("**🚨SAFE EXIT**")
-        if safe_exit:
-            webbrowser.open("https://www.google.com")
+        url = "https://www.google.com"
+
+        # Button zum Öffnen der Webseite
+        st.link_button("**🚨Safe Exit**", url)
     # create tabs
     tabs1, tabs2, tabs3 = st.tabs(['How to know', 'Legal information', 'Women´s Shelters'])
 
