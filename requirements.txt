@@ -1,2 +1,3 @@
 hugchat
+hugchat.login
 webbrowser
