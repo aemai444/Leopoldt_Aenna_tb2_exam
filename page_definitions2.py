@@ -18,9 +18,11 @@ def main_page():
 
     with col2:
         #button to safely exit the page (redirects to Google)
-        safe_exit = st.button("**🚨SAFE EXIT**")
-        if safe_exit:
-            webbrowser.open("https://www.google.com")
+
+        url = "https://www.google.com"
+
+        # Button zum Öffnen der Webseite
+        st.link_button("Safe Exit", url)
 
 # Function to display checkboxes with safety plans
 def checkbox_page():
