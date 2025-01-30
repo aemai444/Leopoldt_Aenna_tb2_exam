@@ -499,6 +499,7 @@ def faq_page():
                 st.write(answer)
 
     with col2:
-        safe_exit = st.button("**🚨SAFE EXIT**")
-        if safe_exit:
-            webbrowser.open("https://www.google.com")
+        url = "https://www.google.com"
+
+        # Button zum Öffnen der Webseite
+        st.link_button("**🚨Safe Exit**", url)
